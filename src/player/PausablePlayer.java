@@ -54,6 +54,7 @@ public class PausablePlayer {
                     thrd = new Thread(r);
                     //thrd.setDaemon(true);
                     thrd.setPriority(Thread.MAX_PRIORITY);
+                    thrd.setDaemon(true);
                     playerStatus = PLAYING;
                     thrd.start();
                     break;
