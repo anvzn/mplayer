@@ -67,6 +67,7 @@ public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        this.setTitle("MP3 Player");
         trackListModel = new DefaultListModel();
         trackList.setModel(trackListModel);
         openButtonMouseClicked(null);
