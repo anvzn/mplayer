@@ -25,17 +25,17 @@ public class Playlist {
     public Playlist(String path) {
         tracks = new ArrayList<>();
         File root = new File(path);
-        collect(root);
+        walkFolders(root);
         current = 0;
         shuffle = false;
         repeatAll = false;
         repeatTrack = false;
     }
 
-    private void collect(File root) {
+    private void walkFolders(File root) {
         for (File f : root.listFiles()) {
             if (f.isDirectory()) {
-                collect(f);
+                walkFolders(f);
             } else {
                 if (f.getName().endsWith(".mp3")) {
                     tracks.add(new Track(f.getAbsolutePath()));
