@@ -18,7 +18,7 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
-    private String directory = "C:\\";
+    private String directory = "";
     private Playlist playlist;
     private final DefaultListModel trackListModel;
     private PausablePlayer player;
